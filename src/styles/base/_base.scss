@@ -1,0 +1,275 @@
+html,body{
+  font-family:  "LXGW WenKai Mono TC", "Stick", "UoqMunThenKhung", "Kaisei Opti", "RocknRoll One", "Hachi Maru Pop","Kaisei Decol", ui-sans-serif, sans-serif !important; 
+  min-height: 100vh;
+  height: auto;
+  background: #b8ae9e;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(190, 189, 188, 0.45);
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(129, 129, 128, 0.45);
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+}
+.intro-text{
+  font-family: "Rampart One" !important;
+}
+.header-text{
+  font-family: "Caveat" !important;
+}
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  background: #fbe5df;
+  transform: rotate(-45deg);
+  animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background: #fbe5df;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 50px;
+}
+.bg{
+  background-image: url(../../assets/images/bg-3.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+}
+.heart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -62%) rotate(45deg);
+  color: rgb(168, 113, 113);
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 99;
+}
+.message{
+  border: 2px solid #857d71;
+  box-shadow: 3px 3px 3px 0px rgba(133, 125, 113, 0.6);
+}
+.message-frame{
+  // border: 1px solid #857d71;
+  border-radius: 14px;
+  // box-shadow: -2px 0px 4px 1px rgb(181 181 181);
+}
+.message-sent-frame{
+  border: 1px solid #DECFC6;
+  box-shadow: 3px 4px 2px 2px #DECFC6;
+}
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+
+.slide-in-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-in-right {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.slide-in-right.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.notice-frame {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.loading-text {
+  display: flex;
+  gap: 2px;
+}
+.char {
+  font-size: 1.25rem;
+  color: white;
+  animation: jump 1s ease-in-out infinite;
+  display: inline-block;
+}
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 0.1s; }
+.delay-3 { animation-delay: 0.2s; }
+.delay-4 { animation-delay: 0.3s; }
+.delay-5 { animation-delay: 0.4s; }
+.delay-6 { animation-delay: 0.5s; }
+.delay-7 { animation-delay: 0.6s; }
+.delay-8 { animation-delay: 0.7s; }
+.delay-9 { animation-delay: 0.8s; }
+.delay-10 { animation-delay: 0.9s; }
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+.game-content{
+  border: 3px solid #847363;
+  box-shadow: 4px 6px 2px 2px #f0baac;
+}
+.game-btn{
+    border: 2px solid #847363;
+    box-shadow: 4px 6px 0px 1px rgb(132 115 99);
+    &:active{
+      box-shadow: 1px 3px 0px 1px rgb(132 115 99);
+      transform: translate(3px,3px);
+    }
+}
+.game-title{
+  border: 3px solid #d19c8c;
+  box-shadow: 4px 6px 0px 1px #c7b9acd1;
+}
+.game-bg{
+  height: 80px;
+   width: 100%;
+   background: #847363;
+   opacity: 0.5;
+   border-radius: 90% 0 90% 60%;
+}
+.answer-card{
+  border: 3px solid #847363;
+  box-shadow: 4px 6px 2px 2px #f0baac;
+  .answer-option{
+    border: 3px solid #515151;
+    box-shadow: 0px 5px 1px 1px #515151;
+    &:active{
+      border: 3px solid #352d2d;
+      box-shadow: 0px 3px 0px 1px #352d2d;
+      transform: translate(0px,3px);
+    }
+  }
+}
+.seat{
+  // background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #ffe3db 100%);
+  background-image: linear-gradient(to top, #e6deff 0%, #eae3ff 1%, #ffe2dc 100%)
+}
+.stage{
+  // background: linear-gradient(135deg, #7986CB, #F48FB1);
+  background-image: linear-gradient(120deg, #d1343c 0%, #f5708f 100%);
+}
+.main-table{
+  background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+}
+.isdrawing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  // background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 98;
+}
+.table{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+}
+.table-noshiny {
+  background-image: linear-gradient(to top, #c7c6c4 0%, #dcdddf 52%, #ebebeb 100%);
+}
+.table-shiny {
+  background-image: linear-gradient(-225deg, #f78375 0%, #ed8876 48%, #ffe8c2 100%);
+  animation: shiny 1s infinite;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+@keyframes shiny {
+  50% {
+    // box-shadow: 0 0 15px 5px rgb(156, 101, 89);
+    transform: scale(1.1);
+  }
+}
+/* 選擇滾動區塊 */
+.scroll-area {
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox 用 */
+  scrollbar-color: #d1b6a3 #f3e8e2; /* Firefox 用 */
+}
+
+/* Chrome、Safari、Edge（WebKit） */
+.scroll-area::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: #f3e8e2;   /* 滾動軌道顏色 */
+  border-radius: 10px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d1b6a3, #a77b67);  /* 滾動條顏色（漸層） */
+  border-radius: 10px;
+  border: 2px solid #f3e8e2;
+}
+
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b78f79, #8f6550);
+}
