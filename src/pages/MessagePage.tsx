@@ -136,7 +136,7 @@ export function Message() {
               <input
                 type="text"
                 placeholder="例：新郎最帥好友、最美閨密小美..."
-                className="text-[#857d71] bg-[#f5eade] w-full rounded-2xl px-3 py-2 text-sm focus:outline-none focus:border-[#cb9b8d]"
+                className="text-[#857d71] bg-[#fbf4ea] w-full rounded-2xl px-3 py-2 text-sm focus:outline-none focus:border-[#cb9b8d]"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -150,7 +150,7 @@ export function Message() {
                 rows={2}
                 maxLength={50}
                 placeholder="例：新郎好帥、新娘身材怎麼那麼好、要幸福喔、要一直幸福下去！💌"
-                className="text-[#857d71] w-full bg-[#f5eade] rounded-2xl px-3 py-2 text-sm resize-none focus:outline-none focus:border-[#cb9b8d]"
+                className="text-[#857d71] w-full bg-[#fbf4ea] rounded-2xl px-3 py-2 text-sm resize-none focus:outline-none focus:border-[#cb9b8d]"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
@@ -204,7 +204,7 @@ export function Message() {
                       </div>
                     )}
                     </div>
-                    <div className="message bg-white rounded-lg px-2 py-1 text-sm text-[#534d46] text-left leading-relaxed">
+                    <div className="message bg-[#fbf4ea] rounded-lg px-2 py-1 text-sm text-[#534d46] text-left leading-relaxed">
                       {m.text}
                     </div>
                     

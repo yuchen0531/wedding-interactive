@@ -66,17 +66,6 @@ function App() {
         console.error('LIFF 初始化失敗:', error);
         setReady(true)
       }
-      // const localLineUserId = localStorage.getItem("lineUserId")
-      // const localProfile = localStorage.getItem("accountInfo")
-      // if(!localLineUserId || !localProfile) {
-      //   const userId = "123456789abcdefg";
-      //   const userName = "測試用使用者";
-      //   localStorage.setItem("lineUserId", userId);
-      //   localStorage.setItem("lineuserName", userName);
-      //   const result = await callFunction("new-account", { userId: userId,userName: userName });
-      //   localStorage.setItem("accountInfo", JSON.stringify(result.data));
-      //   console.log(await result);
-      // }
     };
     initLiff();
   }, [navigate]);
