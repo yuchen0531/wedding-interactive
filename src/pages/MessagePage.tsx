@@ -124,12 +124,13 @@ export function Message() {
 
         {/* 下：輸入區（固定在卡片下方，不捲動） */}
         <section>
-          <p className="text-lg font-semibold text-[#857d71]">
+          
+          <form onSubmit={handleSubmit} className="bg-white message-sent-frame rounded-2xl p-2">
+            <p className="text-lg font-semibold text-[#857d71] ">
             ✏️ 寫下一點什麼給我們吧~<br/><span className="text-sm">(有機會獲得驚喜唷)</span>
           </p>
-          <form onSubmit={handleSubmit} className="bg-white message-sent-frame rounded-2xl p-2">
             <div className="mb-2">
-              <label className="block text-sm text-left ml-2 text-[#6D4C47] mb-1">
+              <label className="block text-sm text-left ml-2 text-[#857d71] mb-1">
                 暱稱
               </label>
               <input
@@ -142,7 +143,7 @@ export function Message() {
             </div>
 
             <div>
-              <label className="block text-sm text-left ml-2 text-[#6D4C47] mb-1">
+              <label className="block text-sm text-left ml-2 text-[#857d71] mb-1">
                 想對我們說的話
               </label>
               <textarea
@@ -169,7 +170,7 @@ export function Message() {
         </section>
       </div>
       {/* 上：留言牆（可捲動） */}
-        <section className="flex-1 flex flex-col">
+        <section className="flex-1 flex flex-col bg-white message-sent-frame rounded-2xl p-2 mb-5 w-full max-w-[650px]">
           <div className="flex items-center justify-between mb-1">
             <p className="text-lg font-semibold text-[#857d71]">
               💌 大家的留言
