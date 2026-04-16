@@ -79,7 +79,7 @@ export function Admin() {
     { (!isLoading && winRecord) && (
       <div className="modal">
         <div className="modal-content w-[90%] max-w-2xl max-h-[90vh]">
-          <div className="flex flex-col items-center justify-center mb-2">
+          <div className="w-flex flex-col items-center justify-center mb-2">
             <p className="text-xl">抽獎結果</p>
           </div>
           <div className="border-2 border-[#413937] p-4 rounded-xl shadow-xl max-h-[50vh] overflow-y-auto scroll-area">

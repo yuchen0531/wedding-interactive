@@ -21,16 +21,24 @@ export function Photo() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <div className="p-4 flex flex-col items-center text-center text-lg text-[#393939] bg">
-      <div className="title-bg mb-4 text-center">
-        <p className="text-3xl font-bold mb-5 text-[#cb9b8d] intro-text">婚紗精選</p>
-        <img src={images.vintage2}  className="w-[180px] mb-3 max-w-lg mx-auto" alt="" />
+    <>
+    <div className="overflow-x-hidden bg-[#F9F7F2] relative isolate">
+      <img
+        src={images.bgRichmenu}
+        alt=""
+        className="fixed inset-0 w-full h-full object-cover opacity-20 pointer-events-none -z-10"
+      />
+      <div className="title-bg mb-4 text-center relative z-10">
+        <p className="text-3xl font-bold mt-5 text-[#8B1D2A] intro-text">婚紗精選</p>
+        <div className="my-5 flex justify-center items-center w-[75%] mx-auto">
+            <div className="h-[1px] w-full bg-[#8B1D2A]"></div>
+            <div className="h-[8px] w-[8px] bg-[#8B1D2A] mx-3 rotate-45 shrink-0"></div>
+            <div className="h-[1px] w-full bg-[#8B1D2A]"></div>
+        </div>
         <p className="text-sm text-[#6d6d6d]">拜託一定要來看看!!</p>
         <p className="text-sm text-[#6d6d6d]">如果你不看的話</p>
         <p className="text-sm text-[#6d6d6d]">那你就會沒看到</p>
-      </div>
-     
-      <div className="">
+        <div className="p-4 flex flex-col items-center text-center text-lg text-[#393939] bg">
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 max-w-4xl">
           {photos.map((p, i) => (
             <div
@@ -45,12 +53,11 @@ export function Photo() {
             </div>
           ))}
         </div>
-      </div>
 
       {/* Lightbox */}
       {selected && (
         <div
-          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
           onClick={() => setSelected(null)}
         >
           <img
@@ -60,5 +67,9 @@ export function Photo() {
         </div>
       )}
     </div>
+      </div>
+    </div>
+    </>
+    
   );
 }

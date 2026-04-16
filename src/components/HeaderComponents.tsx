@@ -10,7 +10,7 @@ export function HeaderComponents() {
 			}, [location])
   return (
 		<div>
-			<div className="md:hidden header z-[99] flex justify-between items-center px-3 py-2 shadow-md fixed top-0 left-0 right-0 z-50 bg-[#c99a8d]">
+			<div className="md:hidden z-[99] flex justify-between items-center px-3 py-2 shadow-md fixed top-0 left-0 right-0 z-50 bg-[#8B1D2A]">
 				<div className="flex items-center">
 					<img src={images.bridal} className='h-[48px]' alt="Bridal" />
 					<p className='text-white mr-4 header-text text-2xl'>Allen & Agnes’s Wedding</p>
@@ -38,7 +38,7 @@ export function HeaderComponents() {
 					</button>
 				</div>
 				<div className={`menu-model ${open ? 'show' : ''}`} onClick={() => setOpen(!open)}>
-					<div className="menu-content text-[#c99a8d] font-bold text-lg">
+					<div className="menu-content text-[#C78C8F] text-lg">
 						<nav>
 							<ul>
 								<li className='py-4'><Link to="/">婚禮資訊</Link></li>
@@ -53,7 +53,7 @@ export function HeaderComponents() {
 					</div>
 				</div>
 			</div>
-			<div className="hidden md:flex justify-between items-center px-3 py-2 shadow-lg fixed top-0 left-0 right-0 z-50 bg-[#c99a8d]">
+			<div className="hidden md:flex justify-between items-center px-3 py-2 shadow-lg fixed top-0 left-0 right-0 z-50 bg-[#8B1D2A]">
 				<div className="flex items-center">
 					<Link to="/"><img src={images.bridal} className='h-[48px]' alt="Bridal" /></Link>
 					<p className='text-white mr-4 header-text text-2xl'>Allen & Agnes’s Wedding</p>

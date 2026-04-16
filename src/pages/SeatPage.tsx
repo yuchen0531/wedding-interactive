@@ -2,6 +2,7 @@ import { useState } from "react";
 // import { useQuery } from '@tanstack/react-query';
 // import { LoadingModal } from "../components/LoadingComponents";
 import { MessageComponents } from "../components/MessageComponents";
+import { images } from "../assets/image";
 // import { callFunction } from "../utils/callFunction";
 // import { QuizComponents } from '../components/QuizComponents';
 // import { WheelComponents } from '../components/WheelComponents';
@@ -93,19 +94,24 @@ export function Seat() {
           onConfirm={() => {}}
           onClose={() => setNoticeModal(false)}
         />
-    <div className="bg-[#fbf4eb] p-4 flex flex-col items-center justify-center text-lg text-center" style={{ minHeight: 'calc(100vh - 92px)' }}>
-      <div className="title-bg text-[#393939] header-text">
+    <div className="overflow-x-hidden bg-[#F7F3ED] relative isolate p-4 flex flex-col items-center justify-center text-lg text-center" style={{ minHeight: 'calc(100vh - 92px)' }}>
+      <img
+        src={images.bgRichmenu}
+        alt=""
+        className="fixed inset-0 w-full h-full object-cover opacity-15 pointer-events-none -z-10"
+      />
+      <div className="title-bg text-[#6A5D52] header-text">
         <p>為了讓您更快找到座位，</p>
         <p className="mb-2">請輸入您的完整姓名進行查詢 💕</p>
         <div className="flex items-center mb-3">
           <input type="text" placeholder="請輸入您的姓名" value={name} className="message bg-white py-1 px-3 rounded-2xl" onChange={(e) => setName(e.target.value)} />
-          <button className="bg-[#87817c] text-white py-1 px-3 rounded-2xl ml-2 text-nowrap" onClick={() => getGuests()}>查詢</button>
+          <button className="bg-[#8B1D2A] text-white py-1 px-3 rounded-2xl ml-2 text-nowrap btn_shadow" onClick={() => getGuests()}>查詢</button>
         </div>
       </div>
       {/* <p >{ 
         王XX您好，您在第 5 桌唷!!
         }</p> */}
-      <div className="w-full max-w-[500px] h-fit bg-white p-3 rounded-2xl mt-3 message">
+      <div className="w-full max-w-[500px] h-fit bg-white p-3 rounded-2xl mt-3 message bg-[#FCFAF7] border border-[#E6DDD2] rounded-[24px] shadow-[0_12px_30px_rgba(0,0,0,0.08),0_2px_8px_rgba(139,29,42,0.04)]">
         <div className="text-white stage tracking-widest w-2/5 rounded h-[40px] bg-white mx-auto flex items-center justify-center -mb-5">舞台</div>
         <div className="flex justify-around mb-1">
           <div>

@@ -2,7 +2,7 @@ html,body{
   font-family:  "LXGW WenKai Mono TC", "Stick", "UoqMunThenKhung", "Kaisei Opti", "RocknRoll One", "Hachi Maru Pop","Kaisei Decol", ui-sans-serif, sans-serif !important; 
   min-height: 100vh;
   height: auto;
-  background: #b8ae9e;
+  background: #F9F7F2;
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 3px;
@@ -33,7 +33,7 @@ html,body{
   }
 }
 .intro-text{
-  font-family: "Rampart One" !important;
+  font-family: "Kaisei Opti" !important;
 }
 .header-text{
   font-family: "Caveat" !important;
@@ -42,7 +42,7 @@ html,body{
   position: relative;
   width: 100px;
   height: 90px;
-  background: #fbe5df;
+  background: #8B1D2A;
   transform: rotate(-45deg);
   animation: heartbeat 1s infinite;
 }
@@ -53,7 +53,7 @@ html,body{
   position: absolute;
   width: 100px;
   height: 90px;
-  background: #fbe5df;
+  background: #8B1D2A;
   border-radius: 50%;
 }
 
@@ -66,17 +66,12 @@ html,body{
   top: 0;
   left: 50px;
 }
-.bg{
-  background-image: url(../../assets/images/bg-3.jpg);
-  background-repeat: repeat;
-  background-size: contain;
-}
 .heart-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-40%, -62%) rotate(45deg);
-  color: rgb(168, 113, 113);
+  color: #F9F7F2;
   font-weight: bold;
   pointer-events: none;
   z-index: 99;
@@ -202,8 +197,8 @@ html,body{
   background-image: linear-gradient(to top, #e6deff 0%, #eae3ff 1%, #ffe2dc 100%)
 }
 .stage{
-  // background: linear-gradient(135deg, #7986CB, #F48FB1);
-  background-image: linear-gradient(120deg, #d1343c 0%, #f5708f 100%);
+  background: linear-gradient(135deg, #8B1D2A, #A52A35);
+  
 }
 .main-table{
   background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
@@ -233,10 +228,13 @@ html,body{
   border-radius: 100%;
 }
 .table-noshiny {
-  background-image: linear-gradient(to top, #c7c6c4 0%, #dcdddf 52%, #ebebeb 100%);
+  background: #E8DED1;
+  color: #5F554B;
 }
 .table-shiny {
-  background-image: linear-gradient(-225deg, #f78375 0%, #ed8876 48%, #ffe8c2 100%);
+  background: #8B1D2A;
+  color: white;
+  box-shadow: 0 6px 12px rgba(139,29,42,0.3);
   animation: shiny 1s infinite;
   border: 2px solid #ffffff;
   color: #ffffff;
@@ -272,4 +270,7 @@ html,body{
 
 .scroll-area::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #b78f79, #8f6550);
+}
+.btn_shadow{
+  box-shadow: 0 6px 14px rgba(139,29,42,0.25);
 }

@@ -56,6 +56,7 @@ import hotel from './images/hotel.jpg'
 import bg1 from './images/bg-1.jpg'
 import bg2 from './images/bg-2.jpg'
 import bg3 from './images/bg-3.jpg'
+import bgRichmenu from './images/bg_richmenu.png'
 
 
 
@@ -118,4 +119,5 @@ export const images = {
   bg1,
   bg2,
   bg3,
+  bgRichmenu
 }

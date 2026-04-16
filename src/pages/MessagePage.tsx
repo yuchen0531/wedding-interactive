@@ -11,6 +11,7 @@ import {
 } from "firebase/database";
 import { db } from "../lib/firebase";
 import { MessageComponents } from "../components/MessageComponents";
+import { images } from "../assets/image";
 
 
 interface MessageItem {
@@ -101,7 +102,13 @@ export function Message() {
   };
 
   return (
-    <div className="bg-[#fbf4eb] flex flex-col items-center text-center text-lg text-[#393939] p-4 overflow-y-auto" style={{ minHeight: 'calc(100vh - 92px)' }}>
+    // <div className="bg-[#F9F7F2] flex flex-col items-center text-center text-lg text-[#393939] p-4 overflow-y-auto" style={{ minHeight: 'calc(100vh - 92px)' }}>
+      <div className="overflow-x-hidden overflow-y-auto bg-[#F9F7F2] relative isolate p-4 flex flex-col items-center justify-center text-lg text-center" style={{ minHeight: 'calc(100vh - 92px)' }}>
+            <img
+              src={images.bgRichmenu}
+              alt=""
+              className="fixed inset-0 w-full h-full object-cover opacity-20 pointer-events-none -z-10"
+            />
       {/* 標題區：固定在上方 */}
       <div className="title-bg mb-3 text-center">
         <p className="text-3xl font-bold mb-3 text-[#857d71] intro-text">

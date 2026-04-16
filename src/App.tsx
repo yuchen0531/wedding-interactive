@@ -20,56 +20,56 @@ const WheelGamePage = lazy(() => import("./pages/WheelGamePage").then(m => ({ de
 function App() {
   const navigate = useNavigate()
   const [ready, setReady] = useState(false)
-  // useEffect(() => {
-  //   const initLiff = async () => {
-  //     const localLineUserId = localStorage.getItem("lineUserId")
-  //     const localProfile = localStorage.getItem("accountInfo")
-  //     if(!localLineUserId || !localProfile) {
-  //       const userId = "123456789abcdefg";
-  //       const userName = "測試用使用者";
-  //       localStorage.setItem("lineUserId", userId);
-  //       localStorage.setItem("lineuserName", userName);
-  //       const result = await callFunction("new-account", { userId: userId,userName: userName });
-  //       localStorage.setItem("accountInfo", JSON.stringify(result.data));
-  //       console.log(await result);
-  //     }
-  //   };
-  //   initLiff();
-  // }, []);
   useEffect(() => {
     const initLiff = async () => {
-      try {
-        await liff.init({ liffId: "2007884701-wbRyqDm8" });
-        const params = new URLSearchParams(window.location.search)
-        const liffState = params.get("liff.state")
-        if (liffState) navigate(liffState, { replace: true })
-
-        if (!liff.isLoggedIn()) {
-          liff.login({ redirectUri: window.location.href });
-          return;
-        }
-        const localLineUserId = localStorage.getItem("lineUserId")
-        const localProfile = localStorage.getItem("accountInfo")
-        if(!localLineUserId || !localProfile) {
-          const profile = await liff.getProfile();
-          const userId = profile.userId;
-          const userName = profile.displayName;
-          localStorage.setItem("lineUserId", userId);
-          localStorage.setItem("lineuserName", userName);
-          console.log('登入成功', profile);
-          const result = await callFunction("new-account", { userId: userId,userName: userName });
-          localStorage.setItem("accountInfo", JSON.stringify(result.data));
-          console.log(await result);
-        }
-        setReady(true)
-      } catch (error) {
-        console.error('LIFF 初始化失敗:', error);
-        setReady(true)
+      const localLineUserId = localStorage.getItem("lineUserId")
+      const localProfile = localStorage.getItem("accountInfo")
+      if(!localLineUserId || !localProfile) {
+        const userId = "123456789abcdefg";
+        const userName = "測試用使用者";
+        localStorage.setItem("lineUserId", userId);
+        localStorage.setItem("lineuserName", userName);
+        const result = await callFunction("new-account", { userId: userId,userName: userName });
+        localStorage.setItem("accountInfo", JSON.stringify(result.data));
+        console.log(await result);
       }
     };
     initLiff();
-  }, [navigate]);
-  if (!ready) return null
+  }, []);
+  // useEffect(() => {
+  //   const initLiff = async () => {
+  //     try {
+  //       await liff.init({ liffId: "2007884701-wbRyqDm8" });
+  //       const params = new URLSearchParams(window.location.search)
+  //       const liffState = params.get("liff.state")
+  //       if (liffState) navigate(liffState, { replace: true })
+
+  //       if (!liff.isLoggedIn()) {
+  //         liff.login({ redirectUri: window.location.href });
+  //         return;
+  //       }
+  //       const localLineUserId = localStorage.getItem("lineUserId")
+  //       const localProfile = localStorage.getItem("accountInfo")
+  //       if(!localLineUserId || !localProfile) {
+  //         const profile = await liff.getProfile();
+  //         const userId = profile.userId;
+  //         const userName = profile.displayName;
+  //         localStorage.setItem("lineUserId", userId);
+  //         localStorage.setItem("lineuserName", userName);
+  //         console.log('登入成功', profile);
+  //         const result = await callFunction("new-account", { userId: userId,userName: userName });
+  //         localStorage.setItem("accountInfo", JSON.stringify(result.data));
+  //         console.log(await result);
+  //       }
+  //       setReady(true)
+  //     } catch (error) {
+  //       console.error('LIFF 初始化失敗:', error);
+  //       setReady(true)
+  //     }
+  //   };
+  //   initLiff();
+  // }, [navigate]);
+  // if (!ready) return null
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* 固定 Header 區域 */}
