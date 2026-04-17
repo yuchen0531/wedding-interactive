@@ -77,17 +77,48 @@ html,body{
   z-index: 99;
 }
 .message{
-  border: 2px solid #857d71;
-  box-shadow: 3px 3px 3px 0px rgba(133, 125, 113, 0.6);
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-top: 6px;
+  color: #5f5148;
+  line-height: 1.8;
+  // border-left: 1px solid #D4AF37;
+  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  // border-radius: 4px;
 }
 .message-frame{
-  // border: 1px solid #857d71;
-  border-radius: 14px;
-  // box-shadow: -2px 0px 4px 1px rgb(181 181 181);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(139, 29, 42, 0.08);
+  border-radius: 4px;
 }
+
 .message-sent-frame{
-  border: 1px solid #DECFC6;
-  box-shadow: 3px 4px 2px 2px #DECFC6;
+  border-top: 4px solid #8B1D2A;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 20px -5px rgba(139, 29, 42, 0.08);
+  border-radius: 4px;
+  // border: 1px solid #DECFC6;
+  // box-shadow: 0px 0px 2px 2px rgb(105 83 86 / 27%);
+  input{
+    border: none !important;
+    border-bottom: 1.5px solid #E8E4D8 !important; /* 淺金底線 */
+    background: transparent !important;
+    border-radius: 0 !important;
+    transition: all 0.4s ease
+  }
+  input:focus{
+    border-bottom: 1.5px solid #D4AF37 !important; /* 聚焦變香檳金 */
+    outline: none;
+  }
+  textarea{
+    border: 1.5px solid #E8E4D8 !important; /* 淺金底線 */
+    background: transparent !important;
+    border-radius: 0 !important;
+    transition: all 0.4s ease
+  }
+   textarea:focus {
+    border: 1.5px solid #D4AF37 !important; /* 聚焦變香檳金 */
+    outline: none;
+  }
 }
 .slide-in-right {
   opacity: 0;
