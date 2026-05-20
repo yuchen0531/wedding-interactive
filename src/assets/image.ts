@@ -1,12 +1,12 @@
 import bridal from './images/bridal.png'
 import img1 from './images/1.png'
 import img2 from './images/2.png'
-import img3 from './images/3.png'
+import allen from './images/allen.jpg'
 import img4 from './images/4.png'
 import img5 from './images/5.png'
 import img6 from './images/6.png'
 import banner1 from './images/banner-1.png'
-import banner2 from './images/banner-2.png'
+import agnes from './images/agnes.jpg'
 import bouquet from './images/bouquet.png'
 import cheers from './images/cheers.png'
 import cherry from './images/cherry.png'
@@ -64,12 +64,12 @@ export const images = {
   bridal,
   img1,
   img2,
-  img3,
+  allen,
   img4,
   img5,
   img6,
   banner1,
-  banner2,
+  agnes,
   bouquet,
   cheers,
   cherry,

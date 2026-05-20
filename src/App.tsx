@@ -38,8 +38,7 @@ function App() {
   }, []);
   // useEffect(() => {
   //   const initLiff = async () => {
-  //     try {
-  //       await liff.init({ liffId: "2007884701-wbRyqDm8" });
+  //     try {2  //       await liff.init({ liffId: "2007884701-wbRyqDm8" });
   //       const params = new URLSearchParams(window.location.search)
   //       const liffState = params.get("liff.state")
   //       if (liffState) navigate(liffState, { replace: true })
@@ -72,7 +71,8 @@ function App() {
   // if (!ready) return null
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* 固定 Header 區域 */}
+      {/* 固定 Header 區域 */}701852963.
+      
       <div className="h-16 shrink-0">
         <HeaderComponents />
       </div>

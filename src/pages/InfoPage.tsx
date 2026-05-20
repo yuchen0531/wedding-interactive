@@ -132,12 +132,12 @@ export function Info() {
                 <p className="text-2xl text-[#706455]">郭晏綸</p>
                 <p className="text-xl text-[#706455]">Allen</p>
             </div>
-            <SlideImage src={images.img3} className="w-1/2 md:w-1/4 lg:w-1/5" direction="right" imgClassName="rounded-l-full md:rounded-none shadow-lg" />
+            <SlideImage src={images.allen} className="w-1/2 md:w-1/4 lg:w-1/5" direction="right" imgClassName="rounded-l-full md:rounded-none shadow-lg" />
             <img src={images.nature1} className="absolute -top-2 z-[90] -right-2 -scale-y-100  rotate-[90deg] w-[220px]" alt="" />
         </div>
         <div className="py-20 flex justify-center w-full relative">
             <img src={images.nature1} className="absolute -top-2 z-[90] -left-2 rotate-[90deg] w-[220px]" alt="" />
-            <SlideImage src={images.banner2} className="w-1/2 md:w-1/4 lg:w-1/5" direction="left" imgClassName="rounded-r-full md:rounded-none shadow-lg" />
+            <SlideImage src={images.agnes} className="w-1/2 md:w-1/4 lg:w-1/5" direction="left" imgClassName="rounded-r-full md:rounded-none shadow-lg" />
             <div className="md:w-1/4 lg:w-1/5 w-1/2 text-center flex flex-col justify-center items-center">
                 <p className="text-3xl font-bold mb-5 text-[#8B1D2A] intro-text">新娘</p>
                 <p className="text-2xl text-[#706455]">陳禹蓁</p>
