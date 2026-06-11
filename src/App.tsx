@@ -1,6 +1,6 @@
-import { useEffect, useState, Suspense, lazy } from "react"
-import { Routes, Route, useNavigate } from "react-router-dom"
-import liff from "@line/liff"
+import { useEffect, Suspense, lazy } from "react"
+import { Routes, Route } from "react-router-dom"
+// import liff from "@line/liff"
 import { callFunction } from "./utils/callFunction"
 import { HeaderComponents } from "./components/HeaderComponents"
 import { FooterComponents } from "./components/FooterCpmponents"
@@ -18,8 +18,8 @@ const Info = lazy(() => import("./pages/InfoPage").then(m => ({ default: m.Info 
 const WheelGamePage = lazy(() => import("./pages/WheelGamePage").then(m => ({ default: m.WheelGamePage })))
 
 function App() {
-  const navigate = useNavigate()
-  const [ready, setReady] = useState(false)
+  // const navigate = useNavigate()
+  // const [ready, setReady] = useState(false)
   useEffect(() => {
     const initLiff = async () => {
       const localLineUserId = localStorage.getItem("lineUserId")
