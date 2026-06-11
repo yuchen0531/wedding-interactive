@@ -147,8 +147,8 @@ export function Info() {
         <div className="py-20 flex justify-center w-full relative">
             <div className="md:w-1/4 lg:w-1/5 w-1/2 text-center flex flex-col justify-center items-center">
                 <p className="text-2xl font-bold mb-5 text-[#8B1D2A] intro-text">時間</p>
-                <p className="text-xl text-[#706455] mb-2">2026 年 10 月 3 日</p>
-                <p className="text-xl text-[#706455] mb-2">星期六 • 午宴</p>
+                <p className="text-xl text-[#706455] mb-2">2026/10/3</p>
+                <p className="text-xl text-[#706455] mb-2">星期六</p>
                 <p className="text-xl text-[#706455]">12:00 恭候入席</p>
                 <p className="text-2xl font-bold my-5 text-[#8B1D2A] intro-text">地點</p>
                 <p className="text-xl text-[#706455]">高雄翰品酒店</p>
