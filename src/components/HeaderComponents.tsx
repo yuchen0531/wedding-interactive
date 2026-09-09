@@ -38,13 +38,13 @@ export function HeaderComponents() {
 					</button>
 				</div>
 				<div className={`menu-model ${open ? 'show' : ''}`} onClick={() => setOpen(!open)}>
-					<div className="menu-content text-[#C78C8F] text-lg">
+					<div className="menu-content text-[#851b28] text-lg">
 						<nav>
 							<ul>
 								<li className='py-4'><Link to="/">婚禮資訊</Link></li>
 								{/* <li className='py-4'><Link to="/wheel-game">答題抽抽樂</Link></li> */}
 								{/* <li className='py-4'><Link to="/raffle">抽獎券領取</Link></li> */}
-								<li className='py-4'><Link to="/message">留下祝福</Link></li>
+								{/* <li className='py-4'><Link to="/message">留下祝福</Link></li> */}
 								<li className='py-4'><Link to="/photo">婚紗精選</Link></li>
 								<li className='py-4'><Link to="/seat">查詢座位</Link></li>
 								{/* <li className='py-4'><Link to="/admin">後台管理</Link></li> */}
@@ -62,7 +62,7 @@ export function HeaderComponents() {
 					<div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/">婚禮資訊</Link></div>
 					{/* <div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/wheel-game">答題抽抽樂</Link></div> */}
 					{/* <div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/raffle">抽獎券領取</Link></div> */}
-					<div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/message">留下祝福</Link></div>
+					{/* <div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/message">留下祝福</Link></div> */}
 					<div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/photo">婚紗精選</Link></div>
 					<div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/seat">查詢座位</Link></div>
 					{/* <div className='mx-4 text-white cursor-pointer hover:underline'><Link to="/admin">後台管理</Link></div> */}

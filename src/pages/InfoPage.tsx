@@ -158,8 +158,16 @@ export function Info() {
         </div>
         <div className="py-20 flex justify-center items-center flex-col w-full relative">
             <p className="text-2xl font-bold mb-5 text-[#8B1D2A] intro-text">前往方式</p>
-            <p className="text-xl text-[#706455]">1.捷運至鹽埕埔站2號出口後步行3分鐘</p>
-            <p className="text-center text-xl text-[#706455]">2.開車至<u><a href="https://www.google.com/maps/search/?api=1&query=高雄市鹽埕區大仁路43號" className="text-xl text-[#706455]">高雄市鹽埕區大仁路43號</a></u><br />(對面有公有停車場)</p>
+            <div className="text-left">
+                <p className="text-xl text-[#706455]">1.捷運至鹽埕埔站2號出口後步行3分鐘</p>
+                <p className="text-xl text-[#706455]">2.開車至<u><a href="https://www.google.com/maps/search/?api=1&query=高雄市鹽埕區大仁路43號" className="text-xl text-[#706455]">高雄市鹽埕區大仁路43號</a></u><br /></p>
+                <p className="text-xl text-[#706455] mt-3">以下為附近停車場:</p>
+                <ul>
+                    <li className="text-xl text-[#706455]">- <u><a href="https://www.google.com/maps/search/?api=1&query=鹽埕立體停車場" className="text-xl text-[#706455]">鹽埕立體停車場</a></u></li>
+                    <li className="text-xl text-[#706455]">- <u><a href="https://www.google.com/maps/search/?api=1&query=鹽埕地下停車場" className="text-xl text-[#706455]">鹽埕地下停車場</a></u></li>
+                    <li className="text-xl text-[#706455]">- <u><a href="https://www.google.com/maps/search/?api=1&query=高雄國際會議中心停車場" className="text-xl text-[#706455]">高雄國際會議中心停車場</a></u></li>
+                </ul>
+            </div>
             <p className="text-2xl font-bold my-5 text-[#8B1D2A] intro-text">地圖</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.7752515010243!2d120.28562289999999!3d22.6248664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0470a97bfccd%3A0xbdf2cfcf0393771f!2z6auY6ZuE57-w5ZOB6YWS5bqX!5e0!3m2!1szh-TW!2stw!4v1764907181108!5m2!1szh-TW!2stw" width="375" height="280" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             <img src={images.leaf5} className="w-[120px] absolute bottom-0 rotate-[62deg] -left-5" alt="" />
@@ -167,11 +175,12 @@ export function Info() {
         </div>
         <div className="py-20 flex flex-col justify-center items-center w-full relative">
             <p className="text-2xl font-bold my-5 text-[#847363] intro-text">貼心小提醒</p>
-            <div style={{ backgroundImage: `url(${images.flower2})` }} className="notice-frame max-w-lg rounded-lg w-[380px] h-[380px] p-3 text-center flex flex-col justify-center items-center relative">
-                <p className="text-lg text-[#847363]">12:00 開放入席</p>
-                <p className="text-lg text-[#847363]">有迎賓雞尾酒及小點心</p>
-                <p className="text-lg text-[#847363]">限量供應</p>
-                <p className="text-lg text-[#847363] mb-5">歡迎提前來吃吃喝喝唷~</p>
+            <div style={{ backgroundImage: `url(${images.flower2})` }} className="notice-frame max-w-lg rounded-lg w-[327px] h-[512px] p-3 text-center flex flex-col justify-center items-center relative">
+                <p className="text-lg text-[#847363]">12:00 恭候入席</p>
+                <p className="text-lg text-[#847363]">若提早抵達</p>
+                <p className="text-lg text-[#847363]">現場備有迎賓雞尾酒吧</p>
+                <p className="text-lg text-[#847363]">限量供應唷～ 🍪</p>
+                <p className="text-lg text-[#847363] mb-5">歡迎提前來吃吃喝喝🍹</p>
             </div>
         </div>
     </div>

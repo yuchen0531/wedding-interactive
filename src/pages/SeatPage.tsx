@@ -9,14 +9,23 @@ import { images } from "../assets/image";
 // import { a, s } from "framer-motion/client";
 
 export function Seat() {
-  const [hightLightTable, setHightLightTable] = useState<number>(0);
+  const [hightLightTable, setHightLightTable] = useState<number | null>(null);
   const [name, setName] = useState<string>('');
   const [msg, setMsg] = useState<string>('');
   const [noticeModal, setNoticeModal] = useState(false);
+  const weddingDate = new Date('2026-10-03T00:00:00+08:00');
   const getGuests = async () => {
-  setHightLightTable(0);
+    const inputName = name.trim();
+    const isTestMode = inputName.includes('測試');
+    const searchName = inputName.replace('測試', '').trim();
+    if (!isTestMode && new Date() < weddingDate) {
+      setMsg('座位查詢於婚禮當日開放 ♡');
+      setNoticeModal(true);
+      return;
+    }
+    setHightLightTable(null)
 
-  if (!name) {
+  if (!searchName) {
     setMsg('請輸入完整姓名');
     setNoticeModal(true);
     return;
@@ -55,16 +64,16 @@ export function Seat() {
         id: string; displayName: string; nameKey: string; tableNo: number; tableName: string;
       }>;
       
-    const searchKey = normalize(name);
+    const searchKey = normalize(searchName);
     const found = items.find(g => g.nameKey === searchKey);
 
     if (found) {
       setHightLightTable(found.tableNo);
-      setMsg(`您的座位安排於「${found.tableName}」桌，歡迎入席。`);
+      setMsg(`您的座位在${found.tableNo !== 0 ? `${found.tableNo}號桌` : ''}「${found.tableName}」歡迎入席。`);
       setNoticeModal(true);
       console.log('✅ match:', found.nameKey, searchKey);
     } else {
-      setHightLightTable(0);
+      setHightLightTable(null)
       setMsg('查無資料，請洽詢現場人員');
       setNoticeModal(true);
       setName('');
@@ -101,11 +110,11 @@ export function Seat() {
         className="fixed inset-0 w-full h-full object-cover opacity-15 pointer-events-none -z-10"
       />
       <div className="title-bg text-[#6A5D52] header-text">
-        <p>為了讓您更快找到座位，</p>
-        <p className="mb-2">請輸入您的完整姓名進行查詢 💕</p>
+        <p className="text-xl">為了讓您更快找到座位，</p>
+        <p className="mb-2 text-xl">請輸入您的完整姓名進行查詢 💕</p>
         <div className="flex items-center justify-center mb-3">
-          <input type="text" placeholder="請輸入您的姓名" value={name} className="bg-white py-1 px-3 rounded-2xl" onChange={(e) => setName(e.target.value)} />
-          <button className="bg-[#8B1D2A] text-white py-1 px-3 rounded-2xl ml-2 text-nowrap btn_shadow" onClick={() => getGuests()}>查詢</button>
+          <input type="text" placeholder="請輸入您的姓名" value={name} className="bg-white py-2 px-3 text-xl rounded-2xl" onChange={(e) => setName(e.target.value)} />
+          <button className="bg-[#8B1D2A] text-white py-2 px-3 rounded-2xl ml-2 text-nowrap btn_shadow" onClick={() => getGuests()}>查詢</button>
         </div>
       </div>
       {/* <p >{ 
@@ -128,9 +137,15 @@ export function Seat() {
             <div className={`text-[#857d71] table mb-1 ${hightLightTable === 8 ? 'table-shiny' : 'table-noshiny'}`}>8</div>
           </div>
           <div>
-            <div className="text-[#857d71] table table-noshiny mt-6 mb-1">主桌</div>
-            <div className="text-[#857d71] h-[200px] bg-[#f0f0f0] border-2"></div>
+          <div
+            className={`text-[#857d71] table mt-6 mb-1 ${
+              hightLightTable === 0 ? "table-shiny" : "table-noshiny"
+            }`}
+          >
+            主桌
           </div>
+          <div className="text-[#857d71] h-[200px] bg-[#f0f0f0] border-2"></div>
+        </div>
           <div className="mt-[65px]">
             <div className={`text-[#857d71] table mb-1 ${hightLightTable === 9 ? 'table-shiny' : 'table-noshiny'}`}>9</div>
             <div className={`text-[#857d71] table mb-1 ${hightLightTable === 10 ? 'table-shiny' : 'table-noshiny'}`}>10</div>

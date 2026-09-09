@@ -71,7 +71,7 @@ function App() {
   // if (!ready) return null
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* 固定 Header 區域 */}701852963.
+      {/* 固定 Header 區域 */}
       
       <div className="h-16 shrink-0">
         <HeaderComponents />
