@@ -1,7 +1,7 @@
-import { useEffect, Suspense, lazy } from "react"
+import { Suspense, lazy } from "react"
 import { Routes, Route } from "react-router-dom"
 // import liff from "@line/liff"
-import { callFunction } from "./utils/callFunction"
+// import { callFunction } from "./utils/callFunction"
 import { HeaderComponents } from "./components/HeaderComponents"
 import { FooterComponents } from "./components/FooterCpmponents"
 
@@ -20,22 +20,22 @@ const WheelGamePage = lazy(() => import("./pages/WheelGamePage").then(m => ({ de
 function App() {
   // const navigate = useNavigate()
   // const [ready, setReady] = useState(false)
-  useEffect(() => {
-    const initLiff = async () => {
-      const localLineUserId = localStorage.getItem("lineUserId")
-      const localProfile = localStorage.getItem("accountInfo")
-      if(!localLineUserId || !localProfile) {
-        const userId = "123456789abcdefg";
-        const userName = "測試用使用者";
-        localStorage.setItem("lineUserId", userId);
-        localStorage.setItem("lineuserName", userName);
-        const result = await callFunction("new-account", { userId: userId,userName: userName });
-        localStorage.setItem("accountInfo", JSON.stringify(result.data));
-        console.log(await result);
-      }
-    };
-    initLiff();
-  }, []);
+  // useEffect(() => {
+  //   const initLiff = async () => {
+  //     const localLineUserId = localStorage.getItem("lineUserId")
+  //     const localProfile = localStorage.getItem("accountInfo")
+  //     if(!localLineUserId || !localProfile) {
+  //       const userId = "123456789abcdefg";
+  //       const userName = "測試用使用者";
+  //       localStorage.setItem("lineUserId", userId);
+  //       localStorage.setItem("lineuserName", userName);
+  //       const result = await callFunction("new-account", { userId: userId,userName: userName });
+  //       localStorage.setItem("accountInfo", JSON.stringify(result.data));
+  //       console.log(await result);
+  //     }
+  //   };
+  //   initLiff();
+  // }, []);
   // useEffect(() => {
   //   const initLiff = async () => {
   //     try {2  //       await liff.init({ liffId: "2007884701-wbRyqDm8" });

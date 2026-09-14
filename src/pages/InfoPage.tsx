@@ -101,7 +101,35 @@ export function Info() {
 
 //     fetchData();
 //   }, []);
+const parkingLots = [
+  {
+    name: '鹽埕立體停車場',
+    query: '鹽埕停車場',
+    placeId: 'ChIJQxzTA3oEbjQRM2knLF-D2D0',
+  },
+  {
+    name: '鹽埕地下停車場',
+    query: '鹽埕地下停車場',
+    placeId: 'ChIJwZC5r0AFbjQRmrvDuNhaQnc',
+  },
+  {
+    name: '高雄國際會議中心停車場',
+    query: '高雄國際會議中心停車場',
+    placeId: 'ChIJmfWaJgAFbjQR2FLGBMXwtSg',
+  },
+];
 
+const getGoogleMapsUrl = (
+  query: string,
+  placeId: string
+) => {
+  return (
+    'https://www.google.com/maps/dir/?api=1' +
+    `&destination=${encodeURIComponent(query)}` +
+    `&destination_place_id=${encodeURIComponent(placeId)}` +
+    '&travelmode=driving'
+  );
+};
   return (
     <div className="overflow-x-hidden bg-[#F9F7F2] relative">
         <img src={images.bgRichmenu} alt="" className="fixed top-0 inset-0 w-full h-full object-cover opacity-20" />
@@ -163,10 +191,24 @@ export function Info() {
                 <p className="text-xl text-[#706455]">2.開車至<u><a href="https://www.google.com/maps/search/?api=1&query=高雄市鹽埕區大仁路43號" className="text-xl text-[#706455]">高雄市鹽埕區大仁路43號</a></u><br /></p>
                 <p className="text-xl text-[#706455] mt-3">以下為附近停車場:</p>
                 <ul>
-                    <li className="text-xl text-[#706455]">- <u><a href="https://www.google.com/maps/search/?api=1&query=鹽埕立體停車場" className="text-xl text-[#706455]">鹽埕立體停車場</a></u></li>
-                    <li className="text-xl text-[#706455]">- <u><a href="https://www.google.com/maps/search/?api=1&query=鹽埕地下停車場" className="text-xl text-[#706455]">鹽埕地下停車場</a></u></li>
-                    <li className="text-xl text-[#706455]">- <u><a href="https://www.google.com/maps/search/?api=1&query=高雄國際會議中心停車場" className="text-xl text-[#706455]">高雄國際會議中心停車場</a></u></li>
-                </ul>
+                    {parkingLots.map((parking) => (
+                        <li
+                        key={parking.placeId}
+                        className="text-xl text-[#706455]"
+                        >
+                        -{' '}
+                        <a
+                            href={getGoogleMapsUrl(
+                            parking.query,
+                            parking.placeId
+                            )}
+                            className="text-xl text-[#706455] underline"
+                        >
+                            {parking.name}
+                        </a>
+                        </li>
+                    ))}
+                    </ul>
             </div>
             <p className="text-2xl font-bold my-5 text-[#8B1D2A] intro-text">地圖</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.7752515010243!2d120.28562289999999!3d22.6248664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0470a97bfccd%3A0xbdf2cfcf0393771f!2z6auY6ZuE57-w5ZOB6YWS5bqX!5e0!3m2!1szh-TW!2stw!4v1764907181108!5m2!1szh-TW!2stw" width="375" height="280" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
