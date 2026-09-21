@@ -8,8 +8,8 @@ export function Photo() {
     const no = String(i + 1).padStart(2, "0");
 
     return {
-      thumb: `/photo/thumb/wedding-${no}.webp`,
-      full: `/photo/wedding-${no}.webp`,
+      thumb: `/photo/thumb/wedding-${no}.webp?v=20260915`,
+      full: `/photo/wedding-${no}.webp?v=20260915`,
     };
   });
 
